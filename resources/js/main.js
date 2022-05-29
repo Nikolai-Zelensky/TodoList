@@ -42,7 +42,7 @@ function renderTodoList() {
     }
 
     for (let j = 0; j < data.completed.length; j++) {
-        let value = data.completed[i];
+        let value = data.completed[j];
         addItemToDOM(value, true);
     }
 }
@@ -83,7 +83,7 @@ function completeItem() {
         data.todo.push(value);
     }
     dataObjectUpdated();
-    
+
     // Проверяем, должен ли элемент быть добавлен в заполненный список или повторно добавлен в todo list
     let target = (id === 'todo') ? document.getElementById('completed') : document.getElementById('todo');
 
